@@ -1,0 +1,6 @@
+#Options +FollowSymLinks
+
+RewriteEngine On
+
+RewriteRule ^$                  web/             [L]
+RewriteRule ^(.*)$              web/$1           [L]

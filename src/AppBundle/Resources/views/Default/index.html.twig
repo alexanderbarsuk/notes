@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bower_components/Materialize/dist/css/materialize.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bower_components/material-design-icons-iconfont/dist/material-design-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/app.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('bower_components/Materialize/dist/js/materialize.min.js') }}"></script>
+    <script src="{{ asset('bower_components/jquery-bridget/jquery.bridget.js') }}"></script>
+    <script src="{{ asset('bower_components/get-style-property/get-style-property.js') }}"></script>
+    <script src="{{ asset('bower_components/get-size/get-size.js') }}"></script>
+    <script src="{{ asset('bower_components/eventEmitter/EventEmitter.js') }}"></script>
+    <script src="{{ asset('bower_components/eventie/eventie.js') }}"></script>
+    <script src="{{ asset('bower_components/doc-ready/doc-ready.js') }}"></script>
+    <script src="{{ asset('bower_components/matches-selector/matches-selector.js') }}"></script>
+    <script src="{{ asset('bower_components/fizzy-ui-utils/utils.js') }}"></script>
+    <script src="{{ asset('bower_components/outlayer/item.js') }}"></script>
+    <script src="{{ asset('bower_components/outlayer/outlayer.js') }}"></script>
+    <script src="{{ asset('bower_components/masonry/masonry.js') }}"></script>
+    <script src="{{ asset('bower_components/imagesloaded/imagesloaded.js') }}"></script>
+    <script src="{{ asset('bower_components/angular/angular.min.js') }}"></script>
+    <script src="{{ asset('bower_components/angular-masonry/angular-masonry.js') }}"></script>
+    <script src="{{ asset('bower_components/underscore/underscore-min.js') }}"></script>
+    <script src="{{ asset('bower_components/angular-sanitize/angular-sanitize.min.js') }}"></script>
+    <script src="{{ asset('bower_components/angular-nl2br/angular-nl2br.min.js') }}"></script>
+    
+    <script src="{{ asset('assets/app.js') }}"></script>
+    <script src="{{ asset('assets/templates.js') }}"></script>
+
+{% endblock %}
+
+{% block body %}
+    <div ng-app="app" ng-controller="IndexController">
+        <navigation></navigation>
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col s4 offset-s4">
+                        <note-new notes="notes" ></note-new>
+                    </div>
+                    {#<div class='col s4' style="height: 50px;">
+                        <a href="javascript:;" ng-click="" class="" style="display: inline-block; margin-top: 13px;"><i class="material-icons" style=" font-size: 50px;">view_module</i></a>
+                        <a href="javascript:;" ng-click="" class="" style="display: inline-block; margin-top: 13px;"><i class="material-icons" style=" font-size: 50px;">view_view_list</i></a>
+                        <a href="javascript:;" ng-click="" class="" style="display: inline-block; margin-top: 13px;"><i class="material-icons" style=" font-size: 50px;">view_quilt</i></a>
+                    </div>#}
+                </div>
+                <div masonry="{'gutter': 20}" load-images="false" preserve-order reload-on-resize class="row">
+                    <note class="masonry-brick" ng-repeat="note in notes" ng-style="{width:note.size}" ></note>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

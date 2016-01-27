@@ -1,0 +1,13 @@
+<div class="card-content">
+    <div class="input-field">
+        <input  type="text" class="validate" ng-model="NoteEditCtrl.note.title">
+        <label for="note-title">Title</label>
+    </div>
+    <div class="input-field">
+        <textarea  class="materialize-textarea" ng-model="NoteEditCtrl.note.content"></textarea>
+        <label for="note-content">Content</label>
+    </div>
+</div>
+<div class="card-action right-align">
+    <a href="javascript:;" class="btn" ng-click="NoteEditCtrl.saveNote()">Save</a>
+</div>

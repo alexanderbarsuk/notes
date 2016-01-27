@@ -1,0 +1,25 @@
+{
+  "name": "task-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexanderbarsuk/task-list.git"
+  },
+  "author": "Alexander Barsuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderbarsuk/task-list/issues"
+  },
+  "homepage": "https://github.com/alexanderbarsuk/task-list",
+  "devDependencies": {
+    "bower": "^1.7.2",
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-concat": "^2.6.0"
+  }
+}

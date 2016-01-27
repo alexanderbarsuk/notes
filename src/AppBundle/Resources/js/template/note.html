@@ -1,0 +1,10 @@
+<div class="card hoverable" >
+    <div class="card-content" note-edit-open-modal style="cursor:pointer">
+        <h5 ng-bind=note.title></h5>
+        <p ng-bind-html="note.content | nl2br"></p>
+    </div>
+    <div class="card-action right-align" style="padding: 10px 0px;">
+        <a href="javascript:;" ng-click="changeSize(note)" style="color: #0097a7;"><i class="material-icons">swap_horiz</i></a>
+        <a href="javascript:;" ng-click="deleteNote(note)" style="color: red;"><i class="material-icons">delete</i></a>
+    </div>
+</div>
